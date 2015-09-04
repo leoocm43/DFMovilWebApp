@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Parada:</strong>
+  <%= @servicio.parada %>
+</p>
+
+<p>
+  <strong>Ruta:</strong>
+  <%= @servicio.ruta %>
+</p>
+
+<p>
+  <strong>Organismo:</strong>
+  <%= @servicio.organismo %>
+</p>
+
+<p>
+  <strong>Latitud:</strong>
+  <%= @servicio.latitud %>
+</p>
+
+<p>
+  <strong>Longitud:</strong>
+  <%= @servicio.longitud %>
+</p>
+
+<%= link_to 'Edit', edit_servicio_path(@servicio) %> |
+<%= link_to 'Back', servicios_path %>

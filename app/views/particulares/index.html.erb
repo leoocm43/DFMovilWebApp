@@ -1,0 +1,40 @@
+<!--<p id="notice"><%= notice %></p>-->
+
+<h1>Particulares</h1>
+<h3>Ingresa la matricula de la unidad particular(auto,taxi,microbús,motocicleta)</h3>
+<div class="large-9 small-10 columns">
+  <input type="text" placeholder="Ingresa la matrícula">
+</div>
+<div class="large-3 small-2 columns">
+  <a href="#" class="alert button expand">Search</a>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Placa</th>
+      <th>Tenencias</th>
+      <th>Infracciones</th>
+      <th>Verificaciones</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @particulares.each do |particulare| %>
+      <tr>
+        <td><%= particulare.placa %></td>
+        <td><%= particulare.tenencias %></td>
+        <td><%= particulare.infracciones %></td>
+        <td><%= particulare.verificaciones %></td>
+        <td><%= link_to 'Show', particulare %></td>
+        <td><%= link_to 'Edit', edit_particulare_path(particulare) %></td>
+        <td><%= link_to 'Destroy', particulare, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Particulare', new_particulare_path %>

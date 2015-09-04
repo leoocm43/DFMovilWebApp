@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombrebase:</strong>
+  <%= @taxi.nombreBase %>
+</p>
+
+<p>
+  <strong>Nombretitular:</strong>
+  <%= @taxi.nombreTitular %>
+</p>
+
+<p>
+  <strong>Latitud:</strong>
+  <%= @taxi.latitud %>
+</p>
+
+<p>
+  <strong>Longitud:</strong>
+  <%= @taxi.longitud %>
+</p>
+
+<%= link_to 'Edit', edit_taxi_path(@taxi) %> |
+<%= link_to 'Back', taxis_path %>

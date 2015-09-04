@@ -1,0 +1,33 @@
+<%= form_for(@taxi) do |f| %>
+  <% if @taxi.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@taxi.errors.count, "error") %> prohibited this taxi from being saved:</h2>
+
+      <ul>
+      <% @taxi.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombreBase %><br>
+    <%= f.text_field :nombreBase %>
+  </div>
+  <div class="field">
+    <%= f.label :nombreTitular %><br>
+    <%= f.text_field :nombreTitular %>
+  </div>
+  <div class="field">
+    <%= f.label :latitud %><br>
+    <%= f.text_field :latitud %>
+  </div>
+  <div class="field">
+    <%= f.label :longitud %><br>
+    <%= f.text_field :longitud %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

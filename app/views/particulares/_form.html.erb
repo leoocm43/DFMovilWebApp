@@ -1,0 +1,33 @@
+<%= form_for(@particulare) do |f| %>
+  <% if @particulare.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@particulare.errors.count, "error") %> prohibited this particulare from being saved:</h2>
+
+      <ul>
+      <% @particulare.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :placa %><br>
+    <%= f.text_field :placa %>
+  </div>
+  <div class="field">
+    <%= f.label :tenencias %><br>
+    <%= f.text_area :tenencias %>
+  </div>
+  <div class="field">
+    <%= f.label :infracciones %><br>
+    <%= f.text_area :infracciones %>
+  </div>
+  <div class="field">
+    <%= f.label :verificaciones %><br>
+    <%= f.text_area :verificaciones %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

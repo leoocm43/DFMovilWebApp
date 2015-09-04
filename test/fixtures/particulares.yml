@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  placa: MyString
+  tenencias: MyText
+  infracciones: MyText
+  verificaciones: MyText
+
+two:
+  placa: MyString
+  tenencias: MyText
+  infracciones: MyText
+  verificaciones: MyText
