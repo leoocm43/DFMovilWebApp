@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Parada:</strong>
+  <%= @transporte.parada %>
+</p>
+
+<p>
+  <strong>Ruta:</strong>
+  <%= @transporte.ruta %>
+</p>
+
+<p>
+  <strong>Organismo:</strong>
+  <%= @transporte.organismo %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @transporte.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @transporte.longitude %>
+</p>
+
+<%= link_to 'Edit', edit_transporte_path(@transporte) %> |
+<%= link_to 'Back', transportes_path %>

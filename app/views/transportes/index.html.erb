@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Servicios de transporte</h1>
+<h3>Elige el servicio de transporte:</h3>
+  <a href="#" class="[tiny small medium large] [secondary alert success] [radius round] button split">Elige servicio               <span data-dropdown="drop"></span></a><br>
+  <ul id="drop" class="f-dropdown" data-dropdown-content>
+    <li><a href="#">Metrobus</a></li>
+    <li><a href="#">Metro</a></li>
+    <li><a href="#">Tren ligero</a></li>
+    <li><a href="#">Trolebús</a></li>
+    <li><a href="#">Tren suburbano</a></li>
+    <li><a href="#">RTP</a></li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parada</th>
+      <th>Ruta</th>
+      <th>Organismo</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @transportes.each do |transporte| %>
+      <tr>
+        <td><%= transporte.parada %></td>
+        <td><%= transporte.ruta %></td>
+        <td><%= transporte.organismo %></td>
+        <td><%= transporte.latitude %></td>
+        <td><%= transporte.longitude %></td>
+        <td><%= link_to 'Show', transporte %></td>
+        <td><%= link_to 'Edit', edit_transporte_path(transporte) %></td>
+        <td><%= link_to 'Destroy', transporte, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Transporte', new_transporte_path %>

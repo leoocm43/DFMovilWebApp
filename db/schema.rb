@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150904041636) do
+ActiveRecord::Schema.define(version: 20150904222758) do
 
   create_table "particulares", force: :cascade do |t|
     t.string   "placa"
@@ -32,6 +32,15 @@ ActiveRecord::Schema.define(version: 20150904041636) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "sitios", force: :cascade do |t|
+    t.string   "NombreBase"
+    t.string   "NombreTitular"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
   create_table "taxis", force: :cascade do |t|
     t.string   "nombreBase"
     t.string   "nombreTitular"
@@ -39,6 +48,16 @@ ActiveRecord::Schema.define(version: 20150904041636) do
     t.string   "longitud"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+  end
+
+  create_table "transportes", force: :cascade do |t|
+    t.string   "parada"
+    t.string   "ruta"
+    t.string   "organismo"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

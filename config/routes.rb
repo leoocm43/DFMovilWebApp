@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :transportes
+  resources :sitios
   resources :particulares
   resources :taxis
   resources :servicios
