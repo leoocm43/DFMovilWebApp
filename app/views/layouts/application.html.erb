@@ -8,6 +8,7 @@
 
     <title><%= content_for?(:title) ? yield(:title) : "DFMovil" %></title>
 
+
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
@@ -48,11 +49,15 @@
         </ul>
       </section>
   </nav>
+
+
     <div class="row">
-      <div class="columns large-12">
-        <%= yield %>
+      <div class="columns large-6">
+            <%= yield %>
       </div>
     </div>
 
   </body>
 </html>
+
+

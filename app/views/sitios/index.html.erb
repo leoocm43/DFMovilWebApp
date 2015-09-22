@@ -21,10 +21,10 @@
         <td><%= sitio.NombreTitular %></td>
         <td><%= sitio.latitude %></td>
         <td><%= sitio.longitude %></td>
-        <td><%= link_to 'Show', sitio %></td>
-        <td><%= link_to 'Edit', edit_sitio_path(sitio) %></td>
-        <td><%= link_to 'Destroy', sitio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <td><%= link_to 'Show', sitio, class:'button' %></td>
+        <td><%= link_to 'Edit', edit_sitio_path(sitio), class:'button' %></td>
+        <!--<td><%= link_to 'Destroy', sitio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>-->
     <% end %>
   </tbody>
 </table>
