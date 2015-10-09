@@ -1,0 +1,2 @@
+module Transportes::MetrobusHelper
+end

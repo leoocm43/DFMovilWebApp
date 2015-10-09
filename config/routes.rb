@@ -1,10 +1,33 @@
 Rails.application.routes.draw do
+  namespace :transportes do
+  get 'metro/show_metro'
+  end
+
+  namespace :transportes do
+  get 'metro/show_metrobus'
+  end
+
+  namespace :transportes do
+  get 'metrobus/show_metrobus'
+  end
+
+  namespace :transportes do
+  get 'tren_ligero/show_metrobus'
+  end
+
+  namespace :transportes do
+  get 'tren_ligero/show_tren_ligero'
+  end
+
+  get 'welcome/index'
+
   resources :transportes
   resources :sitios
   resources :particulares
   resources :taxis
   resources :servicios
-  root 'particulares#index'
+  resources :welcome
+  root 'welcome#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

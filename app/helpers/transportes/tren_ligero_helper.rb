@@ -1,0 +1,2 @@
+module Transportes::TrenLigeroHelper
+end
