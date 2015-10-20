@@ -15,7 +15,7 @@ gem 'sass-rails', '~> 5.0.3'
 # Use CoffeeScript for .coffee assets and views
 #gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
- gem 'therubyracer', platforms: :ruby
+#gem 'therubyracer', platforms: :ruby
 
  gem 'coffee-script-source', '1.8.0'
  gem 'node', '~> 0.0.2'
